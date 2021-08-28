@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Text;
 
 namespace DemonSlayerRPG
 {
     class Character
     {
-        protected string Name;
+        public string Name;
         protected int MaxHP;
         protected int MaxSP;
         protected int HP;
@@ -15,7 +14,7 @@ namespace DemonSlayerRPG
         protected int Focus;    // How much DMG do skills deal and the amount of SP they use.
         protected int Kindness; // Chances of sparing a demon.
 
-        protected List<Skill> Skills = new List<Skill>();
+        public List<Skill> Skills = new List<Skill>();
 
     }
 }
