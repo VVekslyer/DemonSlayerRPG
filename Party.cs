@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using static DemonSlayerRPG.Globals;
 
 namespace DemonSlayerRPG
 {
@@ -10,13 +11,10 @@ namespace DemonSlayerRPG
             
         }
 
-        public delegate void MentionNewMC(string PlayerName);
-
-        public void CreateMC(string PlayerName, Action<string> updateMCName)
+        public void CreateMC(string PlayerName)
         {
-            //mentionNewMC(PlayerName);
-            updateMCName(PlayerName);
             Add(new PartyMember(Name: PlayerName, BreathStyle: "Water", MaxHP: 30, MaxSP: 20, Strength: 3, Focus: 3, Kindness: 3));
+            CreatingMC = false;
         }
     }
 }

@@ -24,7 +24,7 @@ namespace DemonSlayerRPG
         {
             this.DialogueBox = new DemonSlayerRPG.components.DialogueBox();
             this.sceneBox = new System.Windows.Forms.Panel();
-            this.partyMenu = new DemonSlayerRPG.components.PartyMenu();
+            this.PartyMenu = new DemonSlayerRPG.components.PartyMenu();
             this.screen = new System.Windows.Forms.Panel();
             this.screen.SuspendLayout();
             this.SuspendLayout();
@@ -39,7 +39,6 @@ namespace DemonSlayerRPG
             this.DialogueBox.Name = "DialogueBox";
             this.DialogueBox.Size = new System.Drawing.Size(640, 101);
             this.DialogueBox.TabIndex = 1;
-            this.DialogueBox.Click += new System.EventHandler(this.DialogueBox_Click);
             // 
             // sceneBox
             // 
@@ -48,21 +47,22 @@ namespace DemonSlayerRPG
             this.sceneBox.Name = "sceneBox";
             this.sceneBox.Size = new System.Drawing.Size(640, 360);
             this.sceneBox.TabIndex = 6;
+            this.sceneBox.Tag = "battle";
             // 
-            // partyMenu
+            // PartyMenu
             // 
-            this.partyMenu.Font = new System.Drawing.Font("ProggyCleanTT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.partyMenu.Location = new System.Drawing.Point(0, 0);
-            this.partyMenu.Margin = new System.Windows.Forms.Padding(5);
-            this.partyMenu.Name = "partyMenu";
-            this.partyMenu.Size = new System.Drawing.Size(197, 680);
-            this.partyMenu.TabIndex = 7;
-            this.partyMenu.TabStop = false;
+            this.PartyMenu.Font = new System.Drawing.Font("ProggyCleanTT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PartyMenu.Location = new System.Drawing.Point(0, 0);
+            this.PartyMenu.Margin = new System.Windows.Forms.Padding(5);
+            this.PartyMenu.Name = "PartyMenu";
+            this.PartyMenu.Size = new System.Drawing.Size(197, 680);
+            this.PartyMenu.TabIndex = 7;
+            this.PartyMenu.TabStop = false;
             // 
             // screen
             // 
             this.screen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(21)))));
-            this.screen.Controls.Add(this.partyMenu);
+            this.screen.Controls.Add(this.PartyMenu);
             this.screen.Controls.Add(this.sceneBox);
             this.screen.Controls.Add(this.DialogueBox);
             this.screen.Location = new System.Drawing.Point(75, 66);
@@ -83,6 +83,7 @@ namespace DemonSlayerRPG
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Game";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DSRPG";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.screen.ResumeLayout(false);
@@ -93,9 +94,9 @@ namespace DemonSlayerRPG
         #endregion
 
         private components.DialogueBox DialogueBox;
-        private System.Windows.Forms.Panel sceneBox;
         private System.Windows.Forms.Panel screen;
-        public components.PartyMenu partyMenu;
+        public components.PartyMenu PartyMenu;
+        public System.Windows.Forms.Panel sceneBox;
     }
 }
 

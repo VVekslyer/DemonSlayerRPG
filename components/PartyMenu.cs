@@ -10,9 +10,13 @@ namespace DemonSlayerRPG.components
             InitializeComponent();
         }
         
-        public void UpdateMCName(string PlayerName)
+        public void InitiateMC(string PlayerName)
         {
+            CurrentParty.CreateMC(PlayerName);
+            mcName.ForeColor = System.Drawing.Color.WhiteSmoke;
             mcName.Text = PlayerName;
+            mcHP.Value = 100;
+            mcSP.Value = 100;
         }
     }
 }

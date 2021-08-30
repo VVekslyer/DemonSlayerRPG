@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using static DemonSlayerRPG.Globals;
+using DemonSlayerRPG.components.enemies;
 
 namespace DemonSlayerRPG
 {
@@ -15,24 +17,38 @@ namespace DemonSlayerRPG
 
         private void screen_Click(object sender, EventArgs e)
         {
-            DialogueBox.AdvanceStory();
+            if (CreatingMC)
+            {
+                PartyMenu.InitiateMC(DialogueBox.PlayerInput.Text);
+                DialogueBox.AdvanceStory();
+            }
+            else
+                DialogueBox.AdvanceStory();
         }        
-        
-        
         
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (keyData == Keys.Enter)
+            if (keyData == Keys.Enter && CreatingMC)
             {
+                PartyMenu.InitiateMC(DialogueBox.PlayerInput.Text);
                 DialogueBox.AdvanceStory();
                 return true;
             }
+
+            else if (keyData == Keys.Enter)
+            {
+                PartyMenu.Focus();
+                DialogueBox.AdvanceStory();
+                return true;
+            }
+
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        private void DialogueBox_Click(object sender, EventArgs e)
+        public static void LoadBattle(Battle battle)
         {
-            DialogueBox.AdvanceStory();
+
         }
+
     }
 }

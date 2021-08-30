@@ -133,8 +133,17 @@
   <data name="heart2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\heart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="default-battle3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\battle-backgrounds\default-battle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="default-battle6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\battle-backgrounds\default-battle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Earthbound-battle-background-gif-5-GIF-Images-Download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Earthbound-battle-background-gif-5-GIF-Images-Download.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="knife" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\knife.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,14 +160,26 @@
   <data name="spark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\spark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dungeon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\dungeon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="people" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\people.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="default-battle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\battle-backgrounds\default-battle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="people1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\people.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="default-battle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\battle-backgrounds\default-battle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="heart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\heart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="default-battle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\battle-backgrounds\default-battle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shield1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,10 +187,16 @@
   <data name="shield3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="default-battle5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\battle-backgrounds\default-battle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="heart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\heart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dungeon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\dungeon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="default-battle4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\battle-backgrounds\default-battle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="temple-demon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\demons\temple-demon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

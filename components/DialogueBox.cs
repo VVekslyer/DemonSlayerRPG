@@ -1,14 +1,14 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Drawing;
 using System.Windows.Forms;
 using static DemonSlayerRPG.Globals;
+using DemonSlayerRPG.components.enemies;
 
 namespace DemonSlayerRPG.components
 {
     public partial class DialogueBox : Panel
     {
-        // This component reads the text file containing the story,
+        // This component reads the text file containing the story, 
         // displays it to the user, and also prompts the user
         // to type their name and displays it to them.
 
@@ -22,6 +22,7 @@ namespace DemonSlayerRPG.components
             Name = "Dialogue",
             Size = new Size(640, 101),
             ReadOnly = true,
+            HideSelection = true,
             TabIndex = 2,
             Text = ""
         };
@@ -36,7 +37,7 @@ namespace DemonSlayerRPG.components
             TabIndex = 1,
             
         };
-        TextBox PlayerInput = new TextBox()
+        public TextBox PlayerInput = new TextBox()
         {
             BackColor = Color.FromArgb((int)(byte)14, (int)(byte)16, (int)(byte)29),
             BorderStyle = BorderStyle.None,
@@ -67,6 +68,7 @@ namespace DemonSlayerRPG.components
         {
             Font = new Font("ProggyCleanTT", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
             BorderStyle = BorderStyle.None;
+            
             ForeColor = Color.WhiteSmoke;
             ImeMode = ImeMode.Off;
             Location = new Point(311, 468);
@@ -86,27 +88,33 @@ namespace DemonSlayerRPG.components
 
         int i = 1;
         const string path = @"C:\Users\vital\source\repos\DemonSlayerRPG\bin\Debug\netcoreapp3.1\story\test-story.txt";
-        string PlayerName;
+        public string PlayerName;
         string[] textFile = File.ReadAllLines(path);  
         string ch;
-
-
 
 
         public void AdvanceStory()
         {
             // if the line contains a "#", it will skip that line.
-            // if the line contains a ">", it prompt the player to write something.
+            // if the line contains a ">", it prompts the player to write something.
             // if the line contains a "@", it will activate a specified command.
 
             ch = textFile[i];
-
+            
             while (true)
             {
+                string td = " * {Name: \"Temple Demon\", img: temple_demon, MaxHP: 40, MaxSP: 30, Strength: 6, Focus: 6, Kindness: 0}";
+                string[] data = td.Split('"', ' ');
+                for (int i = 0; i < data.Length; ++i)
+                    Dialogue.Text += data[i];
+
+                break;
+
                 if (PlayerPanel.Visible)
                 {
                     PlayerName = PlayerInput.Text;
-                    CurrentParty.Add(new PartyMember(Name: PlayerName, BreathStyle: "Water", MaxHP: 30, MaxSP: 20, Strength: 3, Focus: 3, Kindness: 3));
+                    PlayerPanel.Hide(); 
+                    PlayerInput.Clear();
                 }
 
                 if (ch[1] == '>')
@@ -115,6 +123,7 @@ namespace DemonSlayerRPG.components
                     PlayerPanel.BringToFront();
                     PlayerInput.Focus();
                     ch = textFile[++i];
+                    CreatingMC = true;
                     break;
                 }
 
@@ -145,7 +154,7 @@ namespace DemonSlayerRPG.components
                     Dialogue.AppendText($"{ch + '\n'}");
                     ch = textFile[++i];
 
-                    while (ch[1] != '*' && ch[1] != '#' && ch[1] != '>')
+                    while (ch[1] != '*' && ch[1] != '#' && ch[1] != '>' && ch[1] != '@')
                     {
                         Dialogue.AppendText($"{ch + '\n'}");
                         ch = textFile[++i];
@@ -153,8 +162,6 @@ namespace DemonSlayerRPG.components
 
                     break;
                 }
-
-                PlayerInput.Clear();
             }
 
 
@@ -169,20 +176,20 @@ namespace DemonSlayerRPG.components
                     ch = textFile[++i];
                 }
 
-                else if (ch[2] == 'B' && ch[3] == '1')  // @B1 command starts the first battle.
+                else if (ch[2] == 'B' && ch[3] == '1')  // @B1 command starts a regular battle with one demon.
                 {
-
+                    Demon templeDemon = new Demon(Name: "Temple Demon", img: temple_demon, MaxHP: 40, MaxSP: 30, Strength: 6, Focus: 6, Kindness: 0);
+                    Battle B1 = new Battle(templeDemon);
+                    Game.LoadBattle(B1);
                 }
 
                 else if (ch[2] == 'D' && ch[3] == '1')  // @D1 command starts the first dungeon.
                 {
                     Dialogue.Clear();
-
                 }
 
-
-
             }
+
 
         }
 
