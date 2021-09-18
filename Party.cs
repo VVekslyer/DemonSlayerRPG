@@ -14,7 +14,6 @@ namespace DemonSlayerRPG
         public void CreateMC(string PlayerName)
         {
             Add(new PartyMember(Name: PlayerName, BreathStyle: "Water", MaxHP: 30, MaxSP: 20, Strength: 3, Focus: 3, Kindness: 3));
-            CreatingMC = false;
         }
     }
 }

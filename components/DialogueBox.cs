@@ -87,11 +87,15 @@ namespace DemonSlayerRPG.components
         }
 
         int i = 1;
-        const string path = @"C:\Users\vital\source\repos\DemonSlayerRPG\bin\Debug\netcoreapp3.1\story\test-story.txt";
+        const string path = @"story\test-story.txt";
         public string PlayerName;
         string[] textFile = File.ReadAllLines(path);  
         string ch;
 
+        public void DisplayText(string text)
+        {
+            Dialogue.Text = text;
+        }
 
         public void AdvanceStory()
         {
@@ -103,15 +107,11 @@ namespace DemonSlayerRPG.components
             
             while (true)
             {
-                string td = " * {Name: \"Temple Demon\", img: temple_demon, MaxHP: 40, MaxSP: 30, Strength: 6, Focus: 6, Kindness: 0}";
-                string[] data = td.Split('"', ' ');
-                for (int i = 0; i < data.Length; ++i)
-                    Dialogue.Text += data[i];
-
-                break;
-
                 if (PlayerPanel.Visible)
                 {
+                    if (PlayerInput.Text == "")
+                        break;
+
                     PlayerName = PlayerInput.Text;
                     PlayerPanel.Hide(); 
                     PlayerInput.Clear();
@@ -123,7 +123,7 @@ namespace DemonSlayerRPG.components
                     PlayerPanel.BringToFront();
                     PlayerInput.Focus();
                     ch = textFile[++i];
-                    CreatingMC = true;
+                    Loading = true;
                     break;
                 }
 
@@ -163,8 +163,7 @@ namespace DemonSlayerRPG.components
                     break;
                 }
             }
-
-
+            
 
             void Command()
             {
@@ -178,16 +177,19 @@ namespace DemonSlayerRPG.components
 
                 else if (ch[2] == 'B' && ch[3] == '1')  // @B1 command starts a regular battle with one demon.
                 {
-                    Demon templeDemon = new Demon(Name: "Temple Demon", img: temple_demon, MaxHP: 40, MaxSP: 30, Strength: 6, Focus: 6, Kindness: 0);
+                    Dialogue.Clear();
+                    Demon templeDemon = new Demon(Name: "Temple Demon", img: Sprite[0], MaxHP: 40, MaxSP: 30, Strength: 6, Focus: 6, Kindness: 0, FirstMessage: " * Temple demon wants to fight!");
+                    CurrentDemon = templeDemon;
                     Battle B1 = new Battle(templeDemon);
-                    Game.LoadBattle(B1);
+                    Loading = true;
+                    InBattle = true;
+                    BeginBattle(B1);
                 }
 
                 else if (ch[2] == 'D' && ch[3] == '1')  // @D1 command starts the first dungeon.
                 {
                     Dialogue.Clear();
                 }
-
             }
 
 

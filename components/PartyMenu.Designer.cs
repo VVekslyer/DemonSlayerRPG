@@ -401,6 +401,7 @@ namespace DemonSlayerRPG.components
             this.AttackBtn.TabIndex = 1;
             this.AttackBtn.Text = "Attack";
             this.AttackBtn.UseVisualStyleBackColor = true;
+            this.AttackBtn.Click += new System.EventHandler(this.AttackBtn_Click);
             // 
             // PartyBtn
             // 
@@ -457,6 +458,7 @@ namespace DemonSlayerRPG.components
             this.DefendBtn.TabIndex = 2;
             this.DefendBtn.Text = "Defend";
             this.DefendBtn.UseVisualStyleBackColor = true;
+            this.DefendBtn.Click += new System.EventHandler(this.DefendBtn_Click);
             // 
             // PartyMenu
             // 

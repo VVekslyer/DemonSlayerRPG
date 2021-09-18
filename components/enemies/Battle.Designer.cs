@@ -29,61 +29,70 @@ namespace DemonSlayerRPG.components.enemies
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.leftDemon = new System.Windows.Forms.PictureBox();
+            this.midDemon = new System.Windows.Forms.PictureBox();
+            this.rightDemon = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.leftDemon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midDemon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightDemon)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // leftDemon
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(269, 190);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 167);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.leftDemon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.leftDemon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.leftDemon.Location = new System.Drawing.Point(132, 190);
+            this.leftDemon.Name = "leftDemon";
+            this.leftDemon.Size = new System.Drawing.Size(110, 167);
+            this.leftDemon.TabIndex = 0;
+            this.leftDemon.TabStop = false;
+            this.leftDemon.Click += new System.EventHandler(this.leftDemon_Click);
             // 
-            // pictureBox2
+            // midDemon
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(396, 190);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 167);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.midDemon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.midDemon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.midDemon.Location = new System.Drawing.Point(264, 190);
+            this.midDemon.Name = "midDemon";
+            this.midDemon.Size = new System.Drawing.Size(110, 167);
+            this.midDemon.TabIndex = 1;
+            this.midDemon.TabStop = false;
+            this.midDemon.Click += new System.EventHandler(this.midDemon_Click);
             // 
-            // pictureBox3
+            // rightDemon
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(135, 190);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 167);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.rightDemon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rightDemon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rightDemon.Location = new System.Drawing.Point(399, 190);
+            this.rightDemon.Name = "rightDemon";
+            this.rightDemon.Size = new System.Drawing.Size(110, 167);
+            this.rightDemon.TabIndex = 2;
+            this.rightDemon.TabStop = false;
+            this.rightDemon.Click += new System.EventHandler(this.rightDemon_Click);
             // 
             // Battle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(21)))));
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.rightDemon);
+            this.Controls.Add(this.midDemon);
+            this.Controls.Add(this.leftDemon);
             this.Font = new System.Drawing.Font("ProggyCleanTT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Battle";
             this.Size = new System.Drawing.Size(640, 360);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftDemon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midDemon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightDemon)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.PictureBox leftDemon;
+        public System.Windows.Forms.PictureBox midDemon;
+        public System.Windows.Forms.PictureBox rightDemon;
     }
 }

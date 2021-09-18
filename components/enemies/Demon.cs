@@ -11,8 +11,9 @@ namespace DemonSlayerRPG.components.enemies
         protected string DemonStyle = "Demon Blood Art";
         public DemonSprite Sprite;
         public Image img;
+        public string FirstMessage;
 
-        public Demon(string Name, Image img, int MaxHP, int MaxSP, int Strength, int Focus, int Kindness)
+        public Demon(string Name, Image img, int MaxHP, int MaxSP, int Strength, int Focus, int Kindness, string FirstMessage)
         {
             this.Name = Name;
             this.MaxHP = MaxHP;
@@ -21,7 +22,9 @@ namespace DemonSlayerRPG.components.enemies
             this.Focus = Focus;
             this.Kindness = Kindness;
             this.img = img; // Default sprite: Properties.Resources.temple_demon
-            Sprite = new DemonSprite(Name) { BackgroundImage = new Bitmap("") };
+            this.FirstMessage = FirstMessage;
+
+            Sprite = new DemonSprite(Name) { BackgroundImage = img };
             HP = MaxHP;
             SP = MaxSP;
 
