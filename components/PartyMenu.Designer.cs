@@ -158,7 +158,7 @@ namespace DemonSlayerRPG.components
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::DemonSlayerRPG.Properties.Resources.heart2;
+            this.pictureBox8.Image = global::DemonSlayerRPG.Properties.Resources.heart;
             this.pictureBox8.Location = new System.Drawing.Point(25, 285);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(19, 10);
@@ -226,7 +226,7 @@ namespace DemonSlayerRPG.components
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::DemonSlayerRPG.Properties.Resources.heart2;
+            this.pictureBox6.Image = global::DemonSlayerRPG.Properties.Resources.heart;
             this.pictureBox6.Location = new System.Drawing.Point(25, 212);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(19, 10);
@@ -294,7 +294,7 @@ namespace DemonSlayerRPG.components
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::DemonSlayerRPG.Properties.Resources.heart2;
+            this.pictureBox4.Image = global::DemonSlayerRPG.Properties.Resources.heart;
             this.pictureBox4.Location = new System.Drawing.Point(25, 139);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(19, 10);
@@ -362,7 +362,7 @@ namespace DemonSlayerRPG.components
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::DemonSlayerRPG.Properties.Resources.heart2;
+            this.pictureBox1.Image = global::DemonSlayerRPG.Properties.Resources.heart;
             this.pictureBox1.Location = new System.Drawing.Point(25, 65);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(19, 10);
@@ -393,7 +393,7 @@ namespace DemonSlayerRPG.components
             this.AttackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AttackBtn.Font = new System.Drawing.Font("ProggyCleanTT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AttackBtn.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.AttackBtn.Image = global::DemonSlayerRPG.Properties.Resources.knife1;
+            this.AttackBtn.Image = global::DemonSlayerRPG.Properties.Resources.knife;
             this.AttackBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AttackBtn.Location = new System.Drawing.Point(25, 380);
             this.AttackBtn.Name = "AttackBtn";
@@ -408,7 +408,7 @@ namespace DemonSlayerRPG.components
             this.PartyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PartyBtn.Font = new System.Drawing.Font("ProggyCleanTT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PartyBtn.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.PartyBtn.Image = global::DemonSlayerRPG.Properties.Resources.people2;
+            this.PartyBtn.Image = global::DemonSlayerRPG.Properties.Resources.people;
             this.PartyBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PartyBtn.Location = new System.Drawing.Point(25, 508);
             this.PartyBtn.Name = "PartyBtn";
@@ -422,7 +422,7 @@ namespace DemonSlayerRPG.components
             this.ItemsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ItemsBtn.Font = new System.Drawing.Font("ProggyCleanTT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ItemsBtn.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.ItemsBtn.Image = global::DemonSlayerRPG.Properties.Resources.bag1;
+            this.ItemsBtn.Image = global::DemonSlayerRPG.Properties.Resources.bag;
             this.ItemsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ItemsBtn.Location = new System.Drawing.Point(25, 476);
             this.ItemsBtn.Name = "ItemsBtn";
@@ -450,7 +450,7 @@ namespace DemonSlayerRPG.components
             this.DefendBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DefendBtn.Font = new System.Drawing.Font("ProggyCleanTT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DefendBtn.ForeColor = System.Drawing.Color.NavajoWhite;
-            this.DefendBtn.Image = global::DemonSlayerRPG.Properties.Resources.shield3;
+            this.DefendBtn.Image = global::DemonSlayerRPG.Properties.Resources.shield;
             this.DefendBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DefendBtn.Location = new System.Drawing.Point(25, 412);
             this.DefendBtn.Name = "DefendBtn";

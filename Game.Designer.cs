@@ -22,32 +22,58 @@ namespace DemonSlayerRPG
         /// </summary>
         private void InitializeComponent()
         {
-            this.DialogueBox = new DemonSlayerRPG.components.DialogueBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.sceneBox = new System.Windows.Forms.Panel();
+            this.IntroScreen = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.PartyMenu = new DemonSlayerRPG.components.PartyMenu();
             this.screen = new System.Windows.Forms.Panel();
+            this.sceneBox.SuspendLayout();
+            this.IntroScreen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.screen.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // DialogueBox
-            // 
-            this.DialogueBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DialogueBox.Font = new System.Drawing.Font("ProggyCleanTT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DialogueBox.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.DialogueBox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.DialogueBox.Location = new System.Drawing.Point(311, 476);
-            this.DialogueBox.Name = "DialogueBox";
-            this.DialogueBox.Size = new System.Drawing.Size(640, 101);
-            this.DialogueBox.TabIndex = 1;
             // 
             // sceneBox
             // 
             this.sceneBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.sceneBox.Controls.Add(this.IntroScreen);
             this.sceneBox.Location = new System.Drawing.Point(311, 59);
             this.sceneBox.Name = "sceneBox";
             this.sceneBox.Size = new System.Drawing.Size(640, 360);
             this.sceneBox.TabIndex = 6;
             this.sceneBox.Tag = "battle";
+            // 
+            // IntroScreen
+            // 
+            this.IntroScreen.Controls.Add(this.label1);
+            this.IntroScreen.Controls.Add(this.Logo);
+            this.IntroScreen.Location = new System.Drawing.Point(15, 3);
+            this.IntroScreen.Name = "IntroScreen";
+            this.IntroScreen.Size = new System.Drawing.Size(609, 350);
+            this.IntroScreen.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Determination Mono Web", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1.Location = new System.Drawing.Point(413, 321);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Made by VVekslyer";
+            // 
+            // Logo
+            // 
+            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
+            this.Logo.Location = new System.Drawing.Point(164, 18);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(280, 300);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Logo.TabIndex = 0;
+            this.Logo.TabStop = false;
             // 
             // PartyMenu
             // 
@@ -64,7 +90,6 @@ namespace DemonSlayerRPG
             this.screen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(16)))), ((int)(((byte)(21)))));
             this.screen.Controls.Add(this.PartyMenu);
             this.screen.Controls.Add(this.sceneBox);
-            this.screen.Controls.Add(this.DialogueBox);
             this.screen.Location = new System.Drawing.Point(75, 66);
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(1008, 680);
@@ -86,6 +111,10 @@ namespace DemonSlayerRPG
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DSRPG";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.sceneBox.ResumeLayout(false);
+            this.IntroScreen.ResumeLayout(false);
+            this.IntroScreen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.screen.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -97,6 +126,9 @@ namespace DemonSlayerRPG
         private System.Windows.Forms.Panel screen;
         public components.PartyMenu PartyMenu;
         public System.Windows.Forms.Panel sceneBox;
+        private System.Windows.Forms.Panel IntroScreen;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox Logo;
     }
 }
 
